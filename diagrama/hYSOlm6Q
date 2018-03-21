@@ -1,0 +1,19 @@
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>150</y><w>100</w><h>30</h></coordinates><panel_attributes>Usuarios
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>330</y><w>100</w><h>30</h></coordinates><panel_attributes>Aeropuerto</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>480</y><w>100</w><h>30</h></coordinates><panel_attributes>Companias</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>330</y><w>100</w><h>30</h></coordinates><panel_attributes>Vuelos</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>330</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; destino
+vuelos0 &gt;</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>250</y><w>340</w><h>100</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; origen
+vuelos &gt;</panel_attributes><additional_attributes>10;80;10;20;320;20;320;80</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>150</y><w>240</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; usuario
+reservas &gt;</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>350</y><w>290</w><h>180</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; compania
+vuelos &gt;</panel_attributes><additional_attributes>10;150;270;150;270;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>150</y><w>100</w><h>30</h></coordinates><panel_attributes>Usuarios
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
