@@ -2,6 +2,9 @@
 
 namespace app\models;
 
+use Yii;
+use yii\web\IdentityInterface;
+
 /**
  * This is the model class for table "usuarios".
  *
@@ -11,7 +14,7 @@ namespace app\models;
  *
  * @property Reservas[] $reservas
  */
-class Usuarios extends \yii\db\ActiveRecord
+class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -44,6 +47,56 @@ class Usuarios extends \yii\db\ActiveRecord
             'password' => 'Contraseña',
         ];
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function findIdentity($id)
+    {
+        return self::findOne($id);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthKey()
+    {
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function validateAuthKey($authKey)
+    {
+    }
+
+    /**
+     * Validates password.
+     *
+     * @param string $password password to validate
+     * @return bool if password provided is valid for current user
+     */
+    public function validatePassword($password)
+    {
+        return Yii::$app->getSecurity()->validatePassword($password, $this->password);
+    }
+
+
 
     /**
      * @return \yii\db\ActiveQuery
